@@ -1,0 +1,86 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: sandybrown;
+}
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section button {
+    padding: 12px 15px;
+    outline: none;
+    background: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-transform: uppercase; 
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal {
+    width: 350px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form label {
+    padding-bottom: 6px;
+    font-size: 24px;
+    color: red;
+}
+
+.modal form input {
+    padding: 6px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.modal form button{ 
+    padding: 12px;
+    background: none;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 5px;
+    background-color: brown;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+}
